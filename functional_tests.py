@@ -1,6 +1,6 @@
 from selenium import webdriver
 import unittest
-
+import time
 
 class NewVisitorTest(unittest.TestCase):
 	# 开始函数
@@ -14,6 +14,7 @@ class NewVisitorTest(unittest.TestCase):
 	# 测试的方法
 	def test_can_start_a_list_and_retvieve_it_later (self):
 		self.browser.get("http://localhost:8000")
+		print(self.browser.title)
 		self.assertIn("To-Do", self.browser.title)
 		self.fail("Finish the test!")
 
